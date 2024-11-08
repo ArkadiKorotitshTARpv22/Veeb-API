@@ -1,0 +1,6 @@
+@Veeb_MT_HostAddress = http://localhost:5249
+
+GET {{Veeb_MT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
