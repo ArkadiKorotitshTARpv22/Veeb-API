@@ -13,7 +13,7 @@ namespace Veeb_MT.Controllers
         new Toode(2,"Fanta", 1.0, false),
         new Toode(3,"Sprite", 1.7, true),
         new Toode(4,"Vichy", 2.0, true),
-        new Toode(5,"Vitamin well", 2.5, true)
+        new Toode(5,"Pepsi", 2.5, true)
         };
 
         [HttpGet]
@@ -51,14 +51,16 @@ namespace Veeb_MT.Controllers
                 existingToode.Nimi = nimi;
                 existingToode.Price = hind;
                 existingToode.IsActive = aktiivne;
+                return _tooted;
             }
             else
             {
                 Toode toode = new Toode(id, nimi, hind, aktiivne);
                 _tooted.Add(toode);
+                return _tooted;
             }
 
-            return _tooted;
+            
         }
 
 
